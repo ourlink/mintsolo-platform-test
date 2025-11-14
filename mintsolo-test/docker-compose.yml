@@ -49,6 +49,22 @@ services:
       ZROK_API_ENDPOINT: https://zrok.shared.djjunk.com
       ZROK_ENVIRONMENT_NAME: null
 
+ zrok-share:
+    image: docker.io/openziti/zrok:latest
+    restart: unless-stopped
+    entrypoint: zrok-share.bash
+    depends_on:
+      zrok-enable:
+        condition: service_completed_successfully
+    volumes:
+      - zrok_env:/mnt
+    environment:
+      HOME: /mnt
+      ZROK_BACKEND_MODE: proxy
+      ZROK_TARGET: http://server:3068
+      ZROK_INSECURE: null
+      PFXLOG_NO_JSON: "true"
+
 volumes:
   zrok_env: null
 
