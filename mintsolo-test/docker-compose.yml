@@ -1,5 +1,3 @@
-version: "3.7"
-
 services:
 
   app_proxy:
@@ -29,3 +27,8 @@ services:
       ENABLE_SOLO: true
       ENABLE_PROXY: false
       POOL_IDENTIFIER: MintSolo Umbrel
+
+networks:
+  "mintpool":
+    external: true
+
