@@ -64,7 +64,7 @@ services:
   mintsolo-intro:
     image: ourlink/mintsolo-intro:latest
     ports:
-      - 4066:80
+      - 3069:80
     volumes:
       - zrok_env:/mnt
     restart: unless-stopped
