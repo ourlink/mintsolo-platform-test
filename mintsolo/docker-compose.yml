@@ -38,8 +38,8 @@ services:
       - zrok_env:/mnt
     environment:
       HOME: /mnt
-      ZROK_ENABLE_TOKEN: e794E6PkiamK
-      ZROK_API_ENDPOINT: https://zrok.shared.djjunk.com
+      ZROK_ENABLE_TOKEN: bkybwCNplgYv
+      ZROK_API_ENDPOINT: https://zrok.shared.mintsolo.app
       ZROK_ENVIRONMENT_NAME: null
   zrok-share:
     image: docker.io/openziti/zrok:latest

@@ -1,0 +1,60 @@
+manifestVersion: 1
+id: mintsolo
+name: MintSolo
+tagline: MintSolo - Solo Bitcoin Mining Platform
+icon: https://i.imgur.com/PrgiuqS.png
+category: Development
+version: "0.0.1"
+port: 3069
+description: >-
+  ### Solo Bitcoin Mining with MintSolo via Umbrel: A Data-Driven Approach
+
+
+  In the ever-evolving landscape of Bitcoin mining, solo miners often face unique challenges, 
+  particularly when it comes to monitoring performance and understanding the competitive landscape. 
+  Enter MintSolo, a solo mining platform that significantly enhances the mining experience for individual miners. 
+
+
+  By leveraging the capabilities of Umbrel, MintSolo aggregates data and delivers an insightful analytics 
+  dashboard that allows solo miners to track the performance of their mining operations in real time. 
+
+
+  The integration with Umbrel not only simplifies the setup process but also enables miners to access a 
+  comprehensive overview of their mining rigs. MintSolo’s dashboard provides detailed insights, 
+  including hash rates, uptime statistics, and an array of comparative metrics against other solo miners. 
+  This rich data presentation equips users with the necessary tools to optimize their mining activities, 
+  tweak settings for better efficiency, and ultimately, improve their chances of successfully mining Bitcoin 
+  blocks.
+
+
+  With its user-friendly interface, MintSolo allows even those new to solo mining to harness data analytics 
+  without getting overwhelmed by the technicalities, making solo Bitcoin mining a more accessible and 
+  informed venture.
+
+
+  Take control of your mining destiny with MintSolo's powerful Bitcoin Solo Mining Platform!
+
+
+  You can now Solo Mine Bitcoin at home, on your own Bitcoin Node, using Umbrel, and view your 
+  miner statistics anywhere in the world, all via a secure web connection available only to you.
+
+
+developer: MintSolo Devs
+website: https://mintsolo.com
+submitter: ourlink
+submission: https://github.com/ourlink/mintsolo-api
+repo: https://github.com/ourlink/mintsolo-api
+support: https://github.com/ourlink/mintsolo-api/issues
+gallery:
+  - https://i.imgur.com/TtyoTmc.jpg
+  - https://i.imgur.com/TtyoTmc.jpg
+  - https://i.imgur.com/TtyoTmc.jpg
+releaseNotes: >-
+  This is the BETA release of MintSolo on Umbrel. Using this tool you can now gain
+  a better understanding of how your miner is operating compared to similar miners
+  around the world.
+dependencies:
+  - bitcoin
+path: ""
+defaultUsername: ""
+defaultPassword: ""
