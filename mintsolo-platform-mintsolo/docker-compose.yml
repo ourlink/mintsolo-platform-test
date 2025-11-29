@@ -1,7 +1,7 @@
 services:
 
   server:
-    image: ourlink/mintsolo:latest
+    image: ourlink/mintsolo:latest@sha256:568929be7f5e93d75fd28c5e3705361f01e58450f2b426ec44a718099a4f3826
     restart: unless-stopped
     ports:
       - 3067:3067/tcp
@@ -58,7 +58,7 @@ services:
       ZROK_INSECURE: null
       PFXLOG_NO_JSON: "true"
   mintsolo-intro:
-    image: ourlink/mintsolo-intro:latest
+    image: ourlink/mintsolo-intro:latest@sha256:aa38dcf3fcee372c033a818cee7e29bed42baf2763a72be92ccf1ca8381ac063
     ports:
       - 3069:80
     volumes:
