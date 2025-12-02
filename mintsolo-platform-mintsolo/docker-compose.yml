@@ -24,13 +24,13 @@ services:
       ENABLE_PROXY: false
       POOL_IDENTIFIER: MintSolo Umbrel
   zrok-init:
-    image: busybox:latest
+    image: busybox:latest@sha256:e3652a00a2fabd16ce889f0aa32c38eec347b997e73bd09e69c962ec7f8732ee
     command: chown -Rc 2171:2171 /mnt/
     user: root
     volumes:
       - zrok_env:/mnt
   zrok-enable:
-    image: docker.io/openziti/zrok:latest
+    image: docker.io/openziti/zrok:latest@sha256:ce807816d16a0975763ef5537a58aa3f63fd6d08c8fdc6c882a2d92aa35dac11
     depends_on:
       zrok-init:
         condition: service_completed_successfully
@@ -43,7 +43,7 @@ services:
       ZROK_API_ENDPOINT: https://zrok.shared.mintsolo.app
       ZROK_ENVIRONMENT_NAME: MintSolo
   zrok-share:
-    image: docker.io/openziti/zrok:latest
+    image: docker.io/openziti/zrok:latest@sha256:ce807816d16a0975763ef5537a58aa3f63fd6d08c8fdc6c882a2d92aa35dac11
     restart: unless-stopped
     entrypoint: zrok-share.bash
     depends_on:

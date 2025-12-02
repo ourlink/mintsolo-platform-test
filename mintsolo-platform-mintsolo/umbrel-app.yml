@@ -4,7 +4,7 @@ name: MintSolo
 tagline: MintSolo - Solo Bitcoin Mining Platform
 icon: https://i.imgur.com/PrgiuqS.png
 category: Development
-version: "0.0.4"
+version: "0.0.5"
 port: 3069
 description: >-
   ## Solo Bitcoin Mining with MintSolo via Umbrel: A Data-Driven Approach
@@ -50,12 +50,14 @@ gallery:
   - https://i.imgur.com/47NAdEN.jpg
   - https://i.imgur.com/oAxvQqm.jpg
 releaseNotes: >-
-  This is the BETA release of MintSolo on Umbrel. Using this tool you can now gain
-  a better understanding of how your miner is operating compared to similar miners
-  around the world.
+  This is the BETA release of MintSolo on Umbrel. Your use of this software
+  confirms your responsibility that there may be breaking changes requiring
+  regular updates until all bugs are resolved.
 
 
-  Update to the ZROK backend requiring a new account token.
+  Changes in this release
+    Update to the ZROK backend requiring a new account token.
+    Set specific dependencies for latest on each container.
 dependencies:
   - bitcoin
 path: ""
