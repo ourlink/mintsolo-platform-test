@@ -39,7 +39,7 @@ services:
       - zrok_env:/mnt
     environment:
       HOME: /mnt
-      ZROK_ENABLE_TOKEN: mYu3xXWsMl0S
+      ZROK_ENABLE_TOKEN: Ffe1FB6sGwn9
       ZROK_API_ENDPOINT: https://zrok.shared.mintsolo.app
       ZROK_ENVIRONMENT_NAME: MintSolo
   zrok-share:
