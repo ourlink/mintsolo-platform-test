@@ -1,7 +1,7 @@
 services:
 
   server:
-    image: ourlink/mintsolo:latest@sha256:e8ecdfa70c4d0935b20d59e0d731ebda1b6c53531dee5f0842ee82f1da942398
+    image: ourlink/mintsolo:latest@sha256:124207f42c6e671f76b0e670fd85639a702c3ea7b34590a75cedc7c846857a05
     restart: unless-stopped
     ports:
       - 3067:3067/tcp

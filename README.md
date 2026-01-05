@@ -2,7 +2,7 @@
 
 ## Welcome to a new evolution in Solo Bitcoin Mining!
 
-### MintSolo Platform - Beta v0.0.1
+### MintSolo Platform - Beta v0.0.7
 
 With this release, we are introducing our community app store version of the MintSolo, Solo Bitcoin Mining Platform for Umbrel.
 
@@ -17,12 +17,13 @@ Here are some of the current and future metrics you will enjoy with MintSolo;
 Currently Available Metrics
 
 - Bitcoin Stats - current block, Network Hashrate, Difficulty, Transactions, Price
-- Top 10 Mining Devices - provides a ranking of mining devices in the MintSolo ecosystem
+- Top Mining Devices - provides a ranking of mining devices in the MintSolo ecosystem
 - Active Mining Devices - provides the total number of mining devices in the MintSolo ecosystem
 - Hashrate History Trend - provides a 36-hour trend of MintSolo miner hashrate
-- Difficulty - Current and Best
+- Difficulty - Network Difficulty and your Best Difficulty
 - Workers - hashrate, best difficulty, uptime, last seen
-- Worker Trend - total workers and individual worker trend
+- Worker Trend - total workers and individual worker trend charts
+- Block Odds - Your odds of finding a block based on your hashrate, per day/year
 
 Future Metrics
 
