@@ -28,7 +28,7 @@ services:
     command: chown -Rc 2171:2171 /mnt/
     user: root
     volumes:
-      - ${APP_DATA_DIR}/data/.zrok:/mnt
+      - ${APP_DATA_DIR}/data/zrok_env:/mnt
   zrok-enable:
     image: docker.io/openziti/zrok:latest@sha256:ce807816d16a0975763ef5537a58aa3f63fd6d08c8fdc6c882a2d92aa35dac11
     depends_on:
@@ -36,7 +36,7 @@ services:
         condition: service_completed_successfully
     entrypoint: zrok-enable.bash
     volumes:
-      - ${APP_DATA_DIR}/data/.zrok:/mnt
+      - ${APP_DATA_DIR}/data/zrok_env:/mnt
     environment:
       HOME: /mnt
       ZROK_ENABLE_TOKEN: Ffe1FB6sGwn9
@@ -50,7 +50,7 @@ services:
       zrok-enable:
         condition: service_completed_successfully
     volumes:
-      - ${APP_DATA_DIR}/data/.zrok:/mnt
+      - ${APP_DATA_DIR}/data/zrok_env:/mnt
     environment:
       HOME: /mnt
       ZROK_BACKEND_MODE: proxy
@@ -62,7 +62,7 @@ services:
     ports:
       - 4070:80
     volumes:
-      - ${APP_DATA_DIR}/data/.zrok:/mnt
+      - ${APP_DATA_DIR}/data/zrok_env:/mnt
     restart: unless-stopped
     healthcheck:
       test:
@@ -77,8 +77,8 @@ services:
       retries: 3
       start_period: 5s
 
-# volumes:
-#   zrok_env: null
+volumes:
+  zrok_env: null
 
 networks:
   mintpool:
