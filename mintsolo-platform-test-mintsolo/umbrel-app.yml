@@ -5,7 +5,7 @@ tagline: MintSolo-Test - Solo Bitcoin Mining Platform
 icon: https://i.imgur.com/PrgiuqS.png
 category: Development
 version: "v0.0.1"
-port: 4069
+port: 4070
 description: >-
   ## Solo Bitcoin Mining with MintSolo via Umbrel: A Data-Driven Approach
 
