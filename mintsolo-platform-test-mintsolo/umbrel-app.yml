@@ -1,11 +1,11 @@
 manifestVersion: 1
-id: mintsolo-platform-mintsolo
-name: MintSolo
-tagline: MintSolo - Solo Bitcoin Mining Platform
+id: mintsolo-platform-test-mintsolo
+name: MintSolo Test
+tagline: MintSolo-Test - Solo Bitcoin Mining Platform
 icon: https://i.imgur.com/PrgiuqS.png
 category: Development
-version: "v0.0.8"
-port: 3069
+version: "v0.0.1"
+port: 3070
 description: >-
   ## Solo Bitcoin Mining with MintSolo via Umbrel: A Data-Driven Approach
 

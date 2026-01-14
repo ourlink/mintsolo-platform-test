@@ -60,7 +60,7 @@ services:
   mintsolo-intro:
     image: ourlink/mintsolo-intro:latest@sha256:2203a979caafc99d9845652a137b1b616185577f3340d0edd7c6977866360833
     ports:
-      - 3069:80
+      - 3070:80
     volumes:
       - ${APP_DATA_DIR}/data/zrok_env:/mnt
     restart: unless-stopped
