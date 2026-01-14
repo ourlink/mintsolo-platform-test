@@ -28,7 +28,7 @@ services:
     command: chown -Rc 2171:2171 /mnt/
     user: root
     volumes:
-      - ${APP_DATA_DIR}/data/zrok_env:/mnt
+      - ${APP_DATA_DIR}/data:/mnt
   zrok-enable:
     image: docker.io/openziti/zrok:latest@sha256:ce807816d16a0975763ef5537a58aa3f63fd6d08c8fdc6c882a2d92aa35dac11
     depends_on:
@@ -36,9 +36,10 @@ services:
         condition: service_completed_successfully
     entrypoint: zrok-enable.bash
     volumes:
-      - ${APP_DATA_DIR}/data/zrok_env:/mnt
+      - ${APP_DATA_DIR}/data:/mnt
     environment:
       HOME: /mnt
+      ZROK_STATE_DIRECTORY: /mnt/.zrok
       ZROK_ENABLE_TOKEN: Ffe1FB6sGwn9
       ZROK_API_ENDPOINT: https://zrok.shared.mintsolo.app
       ZROK_ENVIRONMENT_NAME: MintSolo
@@ -50,19 +51,23 @@ services:
       zrok-enable:
         condition: service_completed_successfully
     volumes:
-      - ${APP_DATA_DIR}/data/zrok_env:/mnt
+      - ${APP_DATA_DIR}/data:/mnt
     environment:
       HOME: /mnt
+      ZROK_STATE_DIRECTORY: /mnt/.zrok
       ZROK_BACKEND_MODE: proxy
       ZROK_TARGET: http://server:4068
       ZROK_INSECURE: null
       PFXLOG_NO_JSON: "true"
   mintsolo-intro:
     image: ourlink/mintsolo-intro:latest@sha256:2203a979caafc99d9845652a137b1b616185577f3340d0edd7c6977866360833
+    depends_on:
+      zrok-enable:
+        condition: service_completed_successfully
     ports:
       - 4070:80
     volumes:
-      - ${APP_DATA_DIR}/data/zrok_env:/mnt
+      - ${APP_DATA_DIR}/data:/mnt
     restart: unless-stopped
     healthcheck:
       test:
