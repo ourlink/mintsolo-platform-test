@@ -39,7 +39,7 @@ services:
       - ${APP_DATA_DIR}/zrok:/mnt
     environment:
       HOME: /mnt
-      ZROK_STATE_DIRECTORY: /mnt
+      STATE_DIRECTORY: /mnt
       ZROK_ENABLE_TOKEN: Ffe1FB6sGwn9
       ZROK_API_ENDPOINT: https://zrok.shared.mintsolo.app
       ZROK_ENVIRONMENT_NAME: MintSolo
@@ -54,7 +54,7 @@ services:
       - ${APP_DATA_DIR}/zrok:/mnt
     environment:
       HOME: /mnt
-      ZROK_STATE_DIRECTORY: /mnt
+      STATE_DIRECTORY: /mnt
       ZROK_BACKEND_MODE: proxy
       ZROK_TARGET: http://server:4068
       ZROK_INSECURE: null
