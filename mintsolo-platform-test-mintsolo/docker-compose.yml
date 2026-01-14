@@ -4,8 +4,8 @@ services:
     image: ourlink/mintsolo:latest@sha256:124207f42c6e671f76b0e670fd85639a702c3ea7b34590a75cedc7c846857a05
     restart: unless-stopped
     ports:
-      - 3067:3067/tcp
-      - 3068:3068/tcp
+      - 4067:4067/tcp
+      - 4068:4068/tcp
     volumes:
       - ${APP_DATA_DIR}/data/database:/mintsolo/DB
     environment:
@@ -16,8 +16,8 @@ services:
       BITCOIN_RPC_PORT: ${APP_BITCOIN_RPC_PORT}
       DEV_FEE_ADDRESS: 13hHuBNEkwdnzSVB9aczAY4Nc9FT987qeL
       BITCOIN_RPC_TIMEOUT: 10000
-      STRATUM_PORT: 3067
-      API_PORT: 3068
+      STRATUM_PORT: 4067
+      API_PORT: 4068
       NETWORK: mainnet
       API_SECURE: false
       ENABLE_SOLO: true
@@ -54,13 +54,13 @@ services:
     environment:
       HOME: /mnt
       ZROK_BACKEND_MODE: proxy
-      ZROK_TARGET: http://server:3068
+      ZROK_TARGET: http://server:4068
       ZROK_INSECURE: null
       PFXLOG_NO_JSON: "true"
   mintsolo-intro:
     image: ourlink/mintsolo-intro:latest@sha256:2203a979caafc99d9845652a137b1b616185577f3340d0edd7c6977866360833
     ports:
-      - 3070:80
+      - 4070:80
     volumes:
       - ${APP_DATA_DIR}/data/.zrok:/mnt
     restart: unless-stopped
