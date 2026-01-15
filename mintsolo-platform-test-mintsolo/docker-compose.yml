@@ -70,7 +70,7 @@ services:
       ZROK_INSECURE: null
       PFXLOG_NO_JSON: "true"
   mintsolo-intro:
-    image: ourlink/mintsolo-intro:latest@sha256:7ae70baa4aae9f2284f25ec23dc4c347ba3d858ba0b1a6c35700ccbfed1d07e1
+    image: ourlink/mintsolo-intro:latest@sha256:64368f2fec2158d994f01757b3804d5204abf2ab3db1b73a30ea5a175fb01dd0
     depends_on:
       server:
         condition: service_healthy
