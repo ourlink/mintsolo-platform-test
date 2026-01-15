@@ -38,7 +38,7 @@ services:
   zrok-enable:
     image: docker.io/openziti/zrok:latest@sha256:ce807816d16a0975763ef5537a58aa3f63fd6d08c8fdc6c882a2d92aa35dac11
     depends_on:
-    server:
+      server:
         condition: service_healthy
       zrok-init:
         condition: service_completed_successfully
